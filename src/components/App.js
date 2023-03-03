@@ -15,7 +15,7 @@ function App() {
             <div className="main">
                 <p>Discover The Best Gaming Products</p>
                 <Link to="/products">
-                <button>Shop Now</button>
+                    <button>Shop Now</button>
                 </Link>
             </div>
         </div>

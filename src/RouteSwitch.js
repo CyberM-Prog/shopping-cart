@@ -1,4 +1,5 @@
-import App from "./App";
+import App from "./components/App";
+import ProductsPage from "./components/ProductsPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function RouteSwitch() {
@@ -6,6 +7,7 @@ function RouteSwitch() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<App />} />
+                <Route path="/products" element={<ProductsPage />} />
             </Routes>
         </BrowserRouter>
     );
