@@ -126,3 +126,31 @@ h1 {
 .addtocartbtn {
     height: 1.4rem;
 }
+
+.header {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cart {
+    position: relative;
+}
+
+.cartquantity {
+    position: absolute;
+    background-color: white;
+    color: black;
+    height: 1.3rem;
+    width: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: 500;
+    right: -9px;
+    bottom: -3px;
+    font-size: 1.1rem;
+}

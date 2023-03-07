@@ -1,4 +1,16 @@
+import { useState } from "react";
+
 function ProductCard(props) {
+    const [chosenQuantity, setChosenQuantity] = useState(1);
+
+    function changeCartQuantity() {
+        props.changeCartQuantity(chosenQuantity);
+    }
+
+    function handleQuantityChange(e) {
+        setChosenQuantity(+e.target.value);
+    }
+
     return (
         <div className="product">
             <img src={props.img} alt=""></img>
@@ -8,10 +20,13 @@ function ProductCard(props) {
                 <p className="price">{props.price}</p>
                 <input
                     type="number"
-                    defaultValue="1"
+                    value={chosenQuantity}
                     className="quantity"
+                    onChange={handleQuantityChange}
                 ></input>
-                <button className="addtocartbtn">Add To Cart</button>
+                <button className="addtocartbtn" onClick={changeCartQuantity}>
+                    Add To Cart
+                </button>
             </div>
         </div>
     );

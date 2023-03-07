@@ -1,13 +1,19 @@
 import { CgShoppingCart } from "react-icons/cg";
+import { Link } from "react-router-dom";
 
-function TopSection() {
+function TopSection(props) {
     return (
         <div className="topsection">
-            <h1>The Gaming Store</h1>
+            <Link to="/">
+                <h1 className="header">The Gaming Store</h1>
+            </Link>
             <div className="navbar">
                 <h2>Home</h2>
                 <h2>Products</h2>
-                <CgShoppingCart className="icon" />
+                <div className="cart">
+                    <CgShoppingCart className="icon" />
+                    <div className="cartquantity">{props.cartQuantity}</div>
+                </div>
             </div>
         </div>
     );
