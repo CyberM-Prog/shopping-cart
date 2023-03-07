@@ -3,11 +3,16 @@ import ProductCard from "./ProductCard";
 import chairImage from "../images/alpha-gamer-alegra---fabric-blue---black.jpg";
 import headPhonesImage from "../images/asus-rog-delta-core-headset-gaming.jpg";
 import mouseImage from "../images/logitech-g100s-rato-gaming.jpg";
+import Cart from "./Cart";
 
 function ProductsPage(props) {
     return (
         <div className="productspage">
-            <TopSection cartQuantity={props.cartQuantity} />
+            <Cart isCartHidden={props.isCartHidden} hideCart={props.hideCart} />
+            <TopSection
+                cartQuantity={props.cartQuantity}
+                unhideCart={props.unhideCart}
+            />
             <div className="productscontainer">
                 <ProductCard
                     img={chairImage}

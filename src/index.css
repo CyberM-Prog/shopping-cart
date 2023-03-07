@@ -45,6 +45,10 @@ h1 {
     align-items: center;
 }
 
+.navbar > * {
+    color: white;
+}
+
 .icon {
     font-size: 2rem;
 }
@@ -153,4 +157,50 @@ a {
     right: -9px;
     bottom: -3px;
     font-size: 1.1rem;
+}
+
+.darkeneddiv {
+    height: 100vh;
+    width: 80vw;
+    background-color: black;
+    opacity: 0.2;
+}
+.cartdiv {
+    z-index: 1;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.darkeneddiv + div {
+    height: 100vh;
+    width: 35vw;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carttitle {
+    font-size: 3rem;
+    margin-top: 3rem;
+}
+
+.checkout {
+    margin-top: auto;
+    height: 3rem;
+    width: 9rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    margin-bottom: 5rem;
+}
+
+.closebtn {
+    background-color: white;
+    border: 0;
+    font-size: 2rem;
+    align-self: flex-end;
+    margin: 1rem;
 }

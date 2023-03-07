@@ -10,16 +10,39 @@ function RouteSwitch() {
         setCartQuantity(cartQuantity + number);
     }
 
+    const [isCartHidden, setIsCartHidden] = useState(true);
+
+    function unhideCart() {
+        setIsCartHidden(false);
+    }
+
+    function hideCart() {
+        setIsCartHidden(true);
+    }
+
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<App cartQuantity={cartQuantity} />} />
+                <Route
+                    path="/"
+                    element={
+                        <App
+                            cartQuantity={cartQuantity}
+                            isCartHidden={isCartHidden}
+                            unhideCart={unhideCart}
+                            hideCart={hideCart}
+                        />
+                    }
+                />
                 <Route
                     path="/products"
                     element={
                         <ProductsPage
                             cartQuantity={cartQuantity}
                             changeCartQuantity={changeCartQuantity}
+                            isCartHidden={isCartHidden}
+                            unhideCart={unhideCart}
+                            hideCart={hideCart}
                         />
                     }
                 />
