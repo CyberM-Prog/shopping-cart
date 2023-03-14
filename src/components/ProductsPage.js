@@ -8,7 +8,12 @@ import Cart from "./Cart";
 function ProductsPage(props) {
     return (
         <div className="productspage">
-            <Cart isCartHidden={props.isCartHidden} hideCart={props.hideCart} />
+            <Cart
+                isCartHidden={props.isCartHidden}
+                hideCart={props.hideCart}
+                cart={props.cart}
+                setCart={props.setCart}
+            />
             <TopSection
                 cartQuantity={props.cartQuantity}
                 unhideCart={props.unhideCart}
@@ -17,20 +22,26 @@ function ProductsPage(props) {
                 <ProductCard
                     img={chairImage}
                     name="Alpha Gamer Alegra Fabric Blue / Black"
-                    price="$349.98"
-                    changeCartQuantity={props.changeCartQuantity}
+                    price={349.98}
+                    cart={props.cart}
+                    addToCart={props.addToCart}
+                    setCart={props.setCart}
                 />
                 <ProductCard
                     img={headPhonesImage}
                     name="Asus ROG Delta Core"
-                    price="$102.99"
-                    changeCartQuantity={props.changeCartQuantity}
+                    price={102.99}
+                    cart={props.cart}
+                    addToCart={props.addToCart}
+                    setCart={props.setCart}
                 />
                 <ProductCard
                     img={mouseImage}
                     name="Logitech G100s"
-                    price="$48.50"
-                    changeCartQuantity={props.changeCartQuantity}
+                    price={(48.5).toFixed(2)}
+                    cart={props.cart}
+                    addToCart={props.addToCart}
+                    setCart={props.setCart}
                 />
             </div>
         </div>

@@ -1,13 +1,15 @@
 import App from "./components/App";
 import ProductsPage from "./components/ProductsPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function RouteSwitch() {
     const [cartQuantity, setCartQuantity] = useState(0);
 
-    function changeCartQuantity(number) {
-        setCartQuantity(cartQuantity + number);
+    const [cart, setCart] = useState([]);
+
+    function addToCart(object) {
+        setCart(cart.concat(object));
     }
 
     const [isCartHidden, setIsCartHidden] = useState(true);
@@ -20,6 +22,16 @@ function RouteSwitch() {
         setIsCartHidden(true);
     }
 
+    useEffect(() => {
+        let total = 0;
+
+        cart.forEach((object) => {
+            total += object.quantity;
+        });
+
+        setCartQuantity(total);
+    }, [cart]);
+
     return (
         <BrowserRouter>
             <Routes>
@@ -31,6 +43,8 @@ function RouteSwitch() {
                             isCartHidden={isCartHidden}
                             unhideCart={unhideCart}
                             hideCart={hideCart}
+                            cart={cart}
+                            setCart={setCart}
                         />
                     }
                 />
@@ -39,10 +53,12 @@ function RouteSwitch() {
                     element={
                         <ProductsPage
                             cartQuantity={cartQuantity}
-                            changeCartQuantity={changeCartQuantity}
                             isCartHidden={isCartHidden}
                             unhideCart={unhideCart}
                             hideCart={hideCart}
+                            cart={cart}
+                            addToCart={addToCart}
+                            setCart={setCart}
                         />
                     }
                 />

@@ -5,7 +5,12 @@ import TopSection from "./TopSection";
 function App(props) {
     return (
         <div className="App">
-            <Cart isCartHidden={props.isCartHidden} hideCart={props.hideCart} />
+            <Cart
+                isCartHidden={props.isCartHidden}
+                hideCart={props.hideCart}
+                cart={props.cart}
+                setCart={props.setCart}
+            />
             <TopSection
                 cartQuantity={props.cartQuantity}
                 unhideCart={props.unhideCart}

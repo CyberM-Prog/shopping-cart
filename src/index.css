@@ -180,21 +180,20 @@ a {
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 1rem;
 }
 
 .carttitle {
     font-size: 3rem;
-    margin-top: 3rem;
 }
 
 .checkout {
-    margin-top: auto;
     height: 3rem;
     width: 9rem;
     font-size: 1.5rem;
     border-radius: 1rem;
     margin-bottom: 5rem;
+    align-self: center;
 }
 
 .closebtn {
@@ -203,4 +202,41 @@ a {
     font-size: 2rem;
     align-self: flex-end;
     margin: 1rem;
+}
+
+.cartitems {
+    flex: 1 1 auto;
+    margin: 1rem;
+    display: grid;
+}
+
+.cartitem {
+    height: 20vh;
+    display: flex;
+}
+
+.cartitemdetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: 1 1 auto;
+}
+
+.cartitemdetails > h1 {
+    font-size: 2rem;
+}
+
+.cartitemdetails > p {
+    font-size: 1.5rem;
+}
+
+.cartitemdetails > input {
+    align-self: center;
+    font-size: 1.25rem;
+    width: 3rem;
+}
+
+.total {
+    font-size: 2rem;
+    font-weight: 500;
 }
