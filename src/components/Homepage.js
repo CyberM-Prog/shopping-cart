@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Cart from "./Cart";
 import TopSection from "./TopSection";
 
-function App(props) {
+function Homepage(props) {
     return (
         <div className="App">
             <Cart
@@ -25,4 +25,4 @@ function App(props) {
     );
 }
 
-export default App;
+export default Homepage;
