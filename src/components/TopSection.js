@@ -14,7 +14,7 @@ function TopSection(props) {
                 <Link to="/products">
                     <h2>Products</h2>
                 </Link>
-                <div className="cart" onClick={props.unhideCart}>
+                <div className="cart" onClick={props.unhideCart} data-testid="cart-icon">
                     <CgShoppingCart className="icon" />
                     <div className="cartquantity">{props.cartQuantity}</div>
                 </div>

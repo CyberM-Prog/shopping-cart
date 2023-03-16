@@ -31,7 +31,7 @@ function Cart(props) {
 
     if (props.isCartHidden === false) {
         return (
-            <div className="cartdiv">
+            <div className="cartdiv" data-testid="cart-div">
                 <div className="darkeneddiv"></div>
                 <div>
                     <button className="closebtn" onClick={props.hideCart}>
