@@ -21,7 +21,7 @@ function ProductsPage(props) {
             <div className="productscontainer">
                 <ProductCard
                     img={chairImage}
-                    name="Alpha Gamer Alegra Fabric Blue / Black"
+                    name="Alpha Gamer Alegra"
                     price={349.98}
                     cart={props.cart}
                     addToCart={props.addToCart}

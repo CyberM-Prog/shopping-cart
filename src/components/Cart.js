@@ -34,13 +34,18 @@ function Cart(props) {
             <div className="cartdiv" data-testid="cart-div">
                 <div className="darkeneddiv"></div>
                 <div>
-                    <button className="closebtn" onClick={props.hideCart}>
-                        X
-                    </button>
-                    <h1 className="carttitle">Your shopping cart</h1>
-                    <div className="cartitems">{itemsList}</div>
-                    <p className="total">Total: ${total.toFixed(2)}</p>
-                    <button className="checkout">Checkout</button>
+                    <div class="topcart">
+                        <button className="closebtn" onClick={props.hideCart}>
+                            X
+                        </button>
+                        <h1 className="carttitle">Your shopping cart</h1>
+                        <div className="cartitems">{itemsList}</div>
+                    </div>
+
+                    <div class="totalcheckout">
+                        <p className="total">Total: ${total.toFixed(2)}</p>
+                        <button className="checkout">Checkout</button>
+                    </div>
                 </div>
             </div>
         );
