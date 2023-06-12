@@ -1,5 +1,6 @@
 import ProductsPage from "./components/ProductsPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Homepage from "./components/Homepage";
 
@@ -33,7 +34,7 @@ function App() {
     }, [cart]);
 
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route
                     path="/"
@@ -63,7 +64,7 @@ function App() {
                     }
                 />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
