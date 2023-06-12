@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.4d1e3637.css",
+    "main.js": "/shopping-cart/static/js/main.3cf1b39a.js",
+    "static/media/best_gaming_pc_primary.webp": "/shopping-cart/static/media/best_gaming_pc_primary.602befd3d7bc6a4be38e.webp",
+    "static/media/alpha-gamer-alegra---fabric-blue---black.jpg": "/shopping-cart/static/media/alpha-gamer-alegra---fabric-blue---black.439b566327ab104ae6fa.jpg",
+    "static/media/logitech-g100s-rato-gaming.jpg": "/shopping-cart/static/media/logitech-g100s-rato-gaming.32cc81c46c86cf9de022.jpg",
+    "static/media/asus-rog-delta-core-headset-gaming.jpg": "/shopping-cart/static/media/asus-rog-delta-core-headset-gaming.25b8a05dfc63b8cfc4f9.jpg",
+    "index.html": "/shopping-cart/index.html",
+    "main.4d1e3637.css.map": "/shopping-cart/static/css/main.4d1e3637.css.map",
+    "main.3cf1b39a.js.map": "/shopping-cart/static/js/main.3cf1b39a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4d1e3637.css",
+    "static/js/main.3cf1b39a.js"
+  ]
+}
